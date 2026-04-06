@@ -35,6 +35,7 @@ body {
 /* Add Button */
 .btn-add {
     height: 2.3rem;
+    margin-top: 1rem;
     padding: 0.5rem 1rem;
     border-radius: 6px;
     background-color: #667eea;
