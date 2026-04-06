@@ -1,0 +1,105 @@
+/* Individual Todo Item Box */
+.child-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin: 0.8rem 0;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.child-box:hover {
+    background-color: #e2e2e2;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Todo Text */
+li {
+    flex: 1;
+    margin-left: 1rem;
+    list-style: none;
+    font-size: 1rem;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: gray;
+    opacity: 0.7;
+}
+
+/* Mark Complete Button */
+.btn-mark {
+    border: 2px solid black;
+    border-radius: 50%;
+    height: 1.2rem;
+    width: 1.2rem;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-mark:hover {
+    background-color: #667eea;
+    border-color: #5a67d8;
+}
+
+/* Edit & Delete Buttons */
+.btn-edit,
+.btn-delete {
+    padding: 0.35rem 0.7rem;
+    border-radius: 6px;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-left: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Delete Button Styling */
+.btn-delete {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: #e53935;
+    outline: 2px solid #e53935;
+    font-weight: bold;
+}
+
+/* Edit Button Styling */
+.btn-edit {
+    background-color: #ffa500;
+    color: white;
+}
+
+.btn-edit:hover {
+    background-color: #42a5f5;
+    outline: 2px solid #42a5f5;
+    font-weight: bold;
+    color: white;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 600px) {
+    .child-box {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        padding: 10px;
+    }
+
+    li {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .btn-edit,
+    .btn-delete,
+    .btn-mark {
+        margin-left: 0;
+    }
+}

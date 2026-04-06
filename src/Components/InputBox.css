@@ -1,0 +1,196 @@
+/* General Body & Layout */
+body {
+    background: linear-gradient(to right, #667eea, #764ba2);
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Outer container */
+.Outer-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Input Area */
+.input-area {
+    height: 2rem;
+    width: 90%;
+    max-width: 350px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
+    outline: none;
+    margin-left: 0;
+}
+
+/* Add Button */
+.btn-add {
+    height: 2.3rem;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    background-color: #667eea;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-add:hover {
+    background-color: #5a67d8;
+}
+
+/* Child Todo Box */
+.child-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 10px;
+    margin: 1rem;
+    background-color: #f7f7f7;
+    height: 3rem;
+}
+
+/* Todo Text */
+li {
+    margin-left: 1rem;
+    list-style: none;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+/* Buttons inside todo items */
+.btn-mark {
+    border: 2px solid black;
+    border-radius: 50%;
+    height: 1rem;
+    width: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-delete, .btn-edit {
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-delete {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: #e53935;
+    outline: 2px solid #e53935;
+    font-weight: bold;
+}
+
+.btn-edit {
+    background-color: #ffa500;
+    color: white;
+}
+
+.btn-edit:hover {
+    background-color: #42a5f5;
+    outline: 2px solid #42a5f5;
+    font-weight: bold;
+    color: white;
+}
+
+/* List container */
+.list-container {
+    border: 2px solid black;
+    border-radius: 7px;
+    width: 95%;
+    max-width: 760px;
+    margin-top: 2rem;
+}
+
+/* Stats */
+.stats {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+p {
+    margin-left: 0;
+}
+
+/* Filter Buttons */
+.btn-all, .btn-completed, .btn-remain, .btn-clean {
+    padding: 0.3rem 0.6rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
+
+.btn-all:hover { background-color: lightgreen; color: #E5E7EB; font-weight: bold; }
+.btn-completed:hover { background-color: blue; color: #D1FAE5; font-weight: bold; }
+.btn-remain:hover { background-color: goldenrod; color: #ffedd5; font-weight: bold; }
+.btn-clean:hover { background-color: blueviolet; color: white; font-weight: bold; }
+
+/* Active filter button */
+.active {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+
+/* Search box */
+.search-box {
+    margin-top: 1rem;
+    height: 2rem;
+    width: 90%;
+    max-width: 350px;
+    border: 2px solid black;
+    border-radius: 7px;
+    padding: 0.3rem 0.5rem;
+}
+
+/* Empty message */
+.show-empty {
+    height: 2rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-weight: bolder;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .list-container {
+        width: 95%;
+    }
+    .input-area, .search-box {
+        width: 95%;
+        margin-left: 0;
+    }
+    .btn-add, .btn-delete, .btn-edit {
+        width: auto;
+        padding: 0.4rem 0.6rem;
+    }
+    .child-box {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        height: auto;
+    }
+}
